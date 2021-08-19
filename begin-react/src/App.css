@@ -43,3 +43,8 @@
   height: 64px;
   margin: 5px;
 }
+
+.makeProps {
+  background-color: #94187f;
+  color: bisque;
+}

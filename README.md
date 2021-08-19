@@ -26,3 +26,7 @@ $ yarn start
 ### Javascript 값 사용할 때에는 {}를 사용한다.
 인라인스타일의 경우 style의 네이밍은 camelCase로 사용해야한다.
 css파일에서 불어올때는 'className=' 으로 설정해야한다.
+
+
+### JSX란?
+리액트 컴포넌트에서 xml 형식의 값을 반환해는 것

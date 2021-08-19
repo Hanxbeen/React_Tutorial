@@ -1,10 +1,10 @@
 import React from "react";
 import "./App.css";
 
-function Hello() {
+function Hello(props) {
   const name = "Hanxbeen";
   const makeTag = (
-    <div>
+    <div className="makeProps">
       <p>만든태그</p>
     </div>
   );
@@ -17,7 +17,9 @@ function Hello() {
   return (
     <div style={style}>
       <h1>저는 {name} 입니다</h1>
-      <h2>그럼 20000, 안녕히 계세요..</h2>
+      <h1> {props.name} </h1>
+
+      <h2 style={{ color: props.color }}>그럼 20000, 안녕히 계세요..</h2>
       <div className="gray-box"></div>
       <div className="gray-box"></div>
       <div className="gray-box"></div>
@@ -27,5 +29,7 @@ function Hello() {
     </div>
   );
 }
-
+Hello.defaultProps = {
+  name: "이름없음",
+};
 export default Hello;
