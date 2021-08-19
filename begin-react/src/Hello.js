@@ -17,6 +17,8 @@ function Hello() {
       <div className="gray-box"></div>
       <div className="gray-box"></div>
       <div className="gray-box"></div>
+      {/* 주석 처리하는 방법 */}
+      {/* 주석 처리하는 방법 */}
     </div>
   );
 }
