@@ -19,6 +19,9 @@ function Hello(props) {
       <h1>저는 {name} 입니다</h1>
       <h1> {props.name} </h1>
 
+      {props.isSpecial ? <h1>조건부 렌더링</h1> : null}
+      {props.isSpecial && <h1>조건부 렌더링</h1>}
+
       <h2 style={{ color: props.color }}>그럼 20000, 안녕히 계세요..</h2>
       <div className="gray-box"></div>
       <div className="gray-box"></div>
