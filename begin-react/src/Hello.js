@@ -3,7 +3,11 @@ import "./App.css";
 
 function Hello() {
   const name = "Hanxbeen";
-
+  const makeTag = (
+    <div>
+      <p>만든태그</p>
+    </div>
+  );
   const style = {
     backgroundColor: "Black",
     color: "aqua",
@@ -17,6 +21,7 @@ function Hello() {
       <div className="gray-box"></div>
       <div className="gray-box"></div>
       <div className="gray-box"></div>
+      {makeTag}
       {/* 주석 처리하는 방법 */}
       {/* 주석 처리하는 방법 */}
     </div>
