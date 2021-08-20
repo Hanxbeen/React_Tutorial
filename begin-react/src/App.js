@@ -2,7 +2,10 @@ import React from "react";
 // import Hello from "./Hello";
 // import Wrapper from "./Wrapper";
 // import Counter from "./Counter";
-import InputSample from "./InputSample";
+//import InputSample from "./InputSample";
+
+import Test from "./Test";
+
 function App() {
   return (
     // <Wrapper>
@@ -11,7 +14,8 @@ function App() {
     //   <Hello color="pink" />
     // </Wrapper>
     // <Counter />
-    <InputSample />
+    // <InputSample />
+    <Test />
   );
 }
 
