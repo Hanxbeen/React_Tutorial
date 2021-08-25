@@ -3,8 +3,8 @@ import React from 'react';
 const About = () => {
   return (
     <div>
-      <h1>소개</h1>
-      <p>이 프로젝트는 리액트 라우터 기초를 실습해보는 예제 프로젝트랍니다.</p>
+      <h1>메인</h1>
+      <p>리액트 라우터로 메인페이지 이동 테스트.</p>
     </div>
   );
 };

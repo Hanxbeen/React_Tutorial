@@ -14,7 +14,7 @@ const App = () => {
         </li>
         <li>
           <Link to="/about">
-            <button>소개</button>
+            <button>메인</button>
           </Link>
         </li>
       </ul>
