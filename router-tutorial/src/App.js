@@ -5,6 +5,8 @@ import Home from "./Home";
 import Profile from "./Profile";
 
 const App = () => {
+  // let userCheck = "admin";
+
   return (
     <div>
       <ul>
@@ -14,18 +16,23 @@ const App = () => {
           </Link>
         </li>
         <li>
-          <Link to="/about">
-            <button>메인</button>
+          <Link to="/about?admin=true">
+            <button>관리자로 로그인 한다면?</button>
+          </Link>
+        </li>
+        <li>
+          <Link to="/about?laborer=true">
+            <button>일반 사용자로 로그인 한다면?</button>
           </Link>
         </li>
         <li>
           <Link to="/profiles/admin">
-            <button>관리자 로그인</button>
+            <button>관리자 페이지</button>
           </Link>
         </li>
         <li>
           <Link to="/profiles/laborer">
-            <button>일용직 로그인</button>
+            <button>일반 사용자 페이지</button>
           </Link>
         </li>
       </ul>
