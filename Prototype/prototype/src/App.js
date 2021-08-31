@@ -3,21 +3,25 @@ import { Switch, Route, Link } from "react-router-dom";
 // import About from "./About";
 import StartPage from "./StartPage";
 import MainPage from "./MainPage";
+import { Button } from "react-bootstrap";
+
 const App = () => {
   // let userCheck = "admin";
 
   return (
     <div>
-      <ul>
-        <li>
-          <Link to="/">
-            <button>홈</button>
-          </Link>
-          <Link to="/main">
-            <button>로그인</button>
-          </Link>
-        </li>
-        {/*
+      {/* <ul>
+        <li> */}
+      {/* <Link to="/">
+        <Button style={{ margin: 10 }}>홈</Button>
+      </Link>
+      <Link to="/main">
+        <Button style={{ margin: 10 }} variant="success">
+          로그인
+        </Button>
+      </Link> */}
+      {/* </li> */}
+      {/*
         <li>
           <Link to="/about?admin=true">
             <button>관리자로 로그인 한다면?</button>
@@ -46,8 +50,8 @@ const App = () => {
             <button>일반 사용자 페이지</button>
           </Link>
         </li> */}
-      </ul>
-      <hr />
+      {/* </ul> */}
+      {/* <hr /> */}
       <Switch>
         <Route path="/" exact={true} component={StartPage} />
         <Route path="/main" exact={true} component={MainPage} />
