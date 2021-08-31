@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom"; // * BrowserRouter 불러오기
 import "./index.css";
 import App from "./App";
-import 'bootstrap/dis/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.css";
 //import * as serviceWorker from './serviceWorker';
 
 // IE9의 경우
