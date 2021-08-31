@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route, Link } from "react-router-dom";
 // import About from "./About";
 import StartPage from "./StartPage";
-
+import MainPage from "./MainPage";
 const App = () => {
   // let userCheck = "admin";
 
@@ -12,6 +12,9 @@ const App = () => {
         <li>
           <Link to="/">
             <button>홈</button>
+          </Link>
+          <Link to="/main">
+            <button>로그인</button>
           </Link>
         </li>
         {/*
@@ -47,7 +50,9 @@ const App = () => {
       <hr />
       <Switch>
         <Route path="/" exact={true} component={StartPage} />
-        {/* <Route path="/about" component={About} /> */}
+        <Route path="/main" exact={true} component={MainPage} />
+
+        <Route path="/main" component={MainPage} />
         {/* <Route path="/profiles/:username" component={Profile} /> */}
         <Route
           // path 를 따로 정의하지 않으면 모든 상황에 렌더링됨

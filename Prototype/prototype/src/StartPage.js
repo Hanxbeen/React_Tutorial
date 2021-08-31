@@ -1,10 +1,14 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const StartPage = () => {
   return (
     <div>
-      <h1>홈</h1>
-      <p>이곳은 홈이에요. 가장 먼저 보여지는 페이지죠.</p>
+      <h1>로그인</h1>
+      <p>회사코드찾기</p>{" "}
+      <Link to="/">
+        <button>홈</button>
+      </Link>
     </div>
   );
 };
