@@ -4,6 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import StartPage from "./StartPage";
 import MainPage from "./MainPage";
 import { Button } from "react-bootstrap";
+import "./index.css";
 
 const App = () => {
   // let userCheck = "admin";
