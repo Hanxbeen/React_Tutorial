@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Form } from "react-bootstrap";
+import { Button, Form, Image } from "react-bootstrap";
 import "./index.css";
 
 const StartPage = () => {
@@ -17,9 +17,14 @@ const StartPage = () => {
           width: "300px",
           height: "400px",
           marginLeft: "-150px",
-          marginTop: "-200px",
+          marginTop: "-400px",
         }}
       >
+        <Image
+          src="img/KETI_LOGO.jpg"
+          rounded
+          style={{ width: "300px", height: "350px" }}
+        />
         <Form.Group className="companyCode" controlId="companyCode">
           <Form.Label>회사코드</Form.Label>
           <div style={{ display: "flex", height: "40px" }}>
@@ -34,7 +39,6 @@ const StartPage = () => {
           </div>
           {/*<Form.Text className="text-muted">회사 코드를 찾아주세요</Form.Text>*/}
         </Form.Group>
-
         <Form.Group className="companyNumber" controlId="companyNumber">
           <Form.Label>사번</Form.Label>
           <div style={{ display: "flex", height: "40px" }}>
@@ -49,23 +53,23 @@ const StartPage = () => {
             </Button>
           </div>
         </Form.Group>
-
         <Form.Group className="password" controlId="password">
           <Form.Label>비밀번호</Form.Label>
           <div style={{ display: "flex", height: "40px" }}>
             <Form.Control type="password" placeholder="비밀번호" />
-            <div
-              style={{
-                marginLeft: "5px",
-                width: "100px",
-              }}
-            >
-              <Link to="/main">
-                <Button style={{ height: "40px", fontSize: "13px" }}>
-                  로그인
-                </Button>
-              </Link>
-            </div>
+
+            <Link to="/main">
+              <Button
+                style={{
+                  height: "40px",
+                  fontSize: "13px",
+                  marginLeft: "5px",
+                  width: "78px",
+                }}
+              >
+                로그인
+              </Button>
+            </Link>
           </div>
         </Form.Group>
       </Form>
