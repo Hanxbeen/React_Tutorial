@@ -1,14 +1,13 @@
-import { React } from "react";
+import { React, useState } from "react";
 import { Button, Modal, Container, Row, Col } from "react-bootstrap";
 
-function companyCode(props) {
-  let state = {
-    name: "",
-  };
+function CompanyCode(props) {
+  const [CheckedCode, setCheckedCode] = useState("회사 코드를 선택해주세요");
+
   function sendCompanyName(e) {
-    state.name = e.target.innerText;
-    console.log(state.name);
+    setCheckedCode(e.target.innerText);
   }
+
   return (
     <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
@@ -94,12 +93,7 @@ function companyCode(props) {
       <Modal.Footer>
         <Row style={{ width: "100%" }}>
           <Col md="9">
-            <p
-              style={{ color: "gray", fontSize: "13px" }}
-              onChange={state.name}
-            >
-              회사 코드를 선택해주세요
-            </p>
+            <p style={{ color: "gray", fontSize: "13px" }}>{CheckedCode}</p>
           </Col>
           <Col md="1">
             <Button
@@ -116,4 +110,4 @@ function companyCode(props) {
   );
 }
 
-export default companyCode;
+export default CompanyCode;

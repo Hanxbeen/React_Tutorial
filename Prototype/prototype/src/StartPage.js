@@ -2,16 +2,17 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Form, Image } from "react-bootstrap";
 // import styles from "./index.css";
-import CompanyCodeModal from "./modal/companyCode";
+import CompanyCodeModal from "./modal/CompanyCode";
 
 function StartPage() {
   const [modalShow, setModalShow] = useState(false);
-  const [checkedName, setCheckedName] = useState('');
+  function choice() {
+    setModalShow(false);
+  }
   return (
     <div
       //modal이 작동이 안돼 form 태그를 div로 바꿈.. 폼태그에서 모달이 실행이 안되는이유가 뭘까?
       style={{
-        //display: "flex",
         alignItems: "center",
         justifyContent: "center",
         position: "absolute",
@@ -20,18 +21,21 @@ function StartPage() {
         width: "300px",
         height: "400px",
         marginLeft: "-150px",
-        marginTop: "-430px",
+        marginTop: "-375px",
       }}
     >
       <Image
-        src="img/KETI_LOGO.jpg"
+        src="img/green.png"
         rounded
-        style={{ width: "300px", height: "350px" }}
+        style={{ width: "100%", height: "70%", marginBottom: "40px" }}
       />
-      <Form.Group className="companyCode" controlId="companyCode">
-        <Form.Label>회사코드</Form.Label>
+      <Form.Group
+        className="companyCode"
+        controlId="companyCode"
+        style={{ marginBottom: "5px" }}
+      >
         <div style={{ display: "flex", height: "40px" }}>
-          <Form.Control type="text" placeholder="회사코드" value={checkedName} />
+          <Form.Control type="text" placeholder="회사코드" />
           <Button
             variant="dark"
             type="search"
@@ -40,18 +44,19 @@ function StartPage() {
           >
             검색
           </Button>
-          <CompanyCodeModal
-            show={modalShow}
-            onHide={() => setModalShow(false)}
-          />
+
+          {/*여기가 모달창에서 값 받아오는 곳이여*/}
+
+          <CompanyCodeModal show={modalShow} onHide={() => choice()} />
         </div>
-        {/*<Form.Text className="text-muted">회사 코드를 찾아주세요</Form.Text>*/}
       </Form.Group>
-      <Form.Group className="companyNumber" controlId="companyNumber">
-        <Form.Label>사번</Form.Label>
+      <Form.Group
+        className="companyNumber"
+        controlId="companyNumber"
+        style={{ marginBottom: "5px" }}
+      >
         <div style={{ display: "flex", height: "40px" }}>
           <Form.Control type="text" placeholder="사번" />
-          {/* <Form.Text className="text-muted">사번을 입력해주세요</Form.Text>*/}
           <Button
             variant="dark"
             type="submit"
@@ -62,7 +67,6 @@ function StartPage() {
         </div>
       </Form.Group>
       <Form.Group className="password" controlId="password">
-        <Form.Label>비밀번호</Form.Label>
         <div style={{ display: "flex", height: "40px" }}>
           <Form.Control type="password" placeholder="비밀번호" />
 
