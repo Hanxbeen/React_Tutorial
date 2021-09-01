@@ -1,12 +1,24 @@
-import React from "react";
+import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Form, Image } from "react-bootstrap";
-import "./index.css";
+// import styles from "./index.css";
+import CompanyCodeModal from "./modal/companyCode";
 
-const StartPage = () => {
+function StartPage() {
+  const [modalShow, setModalShow] = useState(false);
+
   return (
     <div>
-      <Form
+      <Button
+        variant="dark"
+        type="search"
+        style={{ marginLeft: "5px", width: "100px", fontSize: "13px" }}
+        onClick={() => setModalShow(true)}
+      >
+        검색
+      </Button>
+      <div
+        //modal이 작동이 안돼 form 태그를 div로 바꿈.. 폼태그에서 모달이 실행이 안되는이유가 뭘까?
         style={{
           //display: "flex",
           alignItems: "center",
@@ -33,9 +45,14 @@ const StartPage = () => {
               variant="dark"
               type="search"
               style={{ marginLeft: "5px", width: "100px", fontSize: "13px" }}
+              onClick={() => setModalShow(true)}
             >
               검색
             </Button>
+            <CompanyCodeModal
+              show={modalShow}
+              onHide={() => setModalShow(false)}
+            />
           </div>
           {/*<Form.Text className="text-muted">회사 코드를 찾아주세요</Form.Text>*/}
         </Form.Group>
@@ -72,9 +89,9 @@ const StartPage = () => {
             </Link>
           </div>
         </Form.Group>
-      </Form>
+      </div>
     </div>
   );
-};
+}
 
 export default StartPage;

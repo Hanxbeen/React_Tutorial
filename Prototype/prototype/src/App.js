@@ -1,9 +1,8 @@
-import React from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { React } from "react";
+import { Switch, Route } from "react-router-dom";
 // import About from "./About";
 import StartPage from "./StartPage";
 import MainPage from "./MainPage";
-import { Button } from "react-bootstrap";
 import "./index.css";
 
 const App = () => {

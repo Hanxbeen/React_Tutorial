@@ -36,3 +36,16 @@
     transform: rotate(360deg);
   }
 }
+
+.formFrame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 400px;
+  margin-left: -150px;
+  margin-top: -400px;
+}
