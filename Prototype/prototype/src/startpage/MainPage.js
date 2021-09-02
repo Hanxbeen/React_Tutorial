@@ -9,6 +9,7 @@ import {
   Tab,
   Row,
   Col,
+  NavDropdown,
 } from "react-bootstrap";
 import salesStatus from "../sidemenu/sales/Status";
 import salesManagement from "../sidemenu/sales/Management";
@@ -29,42 +30,33 @@ const MainPage = () => {
     <div>
       <Navbar bg="dark" variant="dark">
         <Container>
-          <Navbar.Brand href="#home">ERP</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="#pricing">도움말(F1)</Nav.Link>
-            <Nav.Link href="#pricing">환경 설정</Nav.Link>
-            <Nav.Link href="#pricing">등록</Nav.Link>
-            <Nav.Link href="#pricing">삭제</Nav.Link>
-            <Nav.Link href="#pricing">저장</Nav.Link>
-            <Nav.Link href="#pricing">조회</Nav.Link>
-            <Nav.Link href="#pricing">출력</Nav.Link>
-            <Nav.Item>
-              <Nav.Link href="/main">Active</Nav.Link>
-            </Nav.Item>
-          </Nav>
-          <Nav fill variant="tabs" defaultActiveKey="/home">
-            {/** <Nav.Item>
-              <Nav.Link href="/link-1">Active</Nav.Link>
+          <Navbar.Brand href="/main">ERP</Navbar.Brand>
+
+          <Nav variant="pills" defaultActiveKey="/home">
+            {/* <Nav.Item>
+              <Nav.Link href="/home">Active</Nav.Link>
             </Nav.Item>*/}
             <Nav.Item>
-              <Nav.Link eventKey="link-2">Loooonger NavLink</Nav.Link>
+              <Nav.Link eventKey="link-1">도움말(F1)</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link eventKey="link-3">Link</Nav.Link>
+              <Nav.Link eventKey="link-2">환경 설정</Nav.Link>
             </Nav.Item>
-            <Nav.Item>
-              <Nav.Link eventKey="disabled" disabled>
-                Disabled
-              </Nav.Link>
-            </Nav.Item>
+
+            <NavDropdown
+              id="nav-dropdown-dark-example"
+              title="Action"
+              menuVariant="dark"
+            >
+              <NavDropdown.Item href="#action/3.1">등록</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">수정</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">조회</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">삭제</NavDropdown.Item>
+            </NavDropdown>
           </Nav>
+
           <Navbar.Collapse className="justify-content-end">
-            {/**<Navbar.Text>
-              Signed in as: <a href="#login">Mark Otto</a>
-            </Navbar.Text>
-            <Nav.Link href="#home" style={{ color: "white" }}>
-              접속 상태
-            </Nav.Link>*/}
             <Image
               src="img/signal.png"
               onClick={logout}
@@ -73,9 +65,16 @@ const MainPage = () => {
                 height: "20px",
               }}
             />
-            <Nav.Link href="#features" style={{ color: "white" }}>
+            <Navbar.Text
+              style={{
+                color: "white",
+                marginLeft: "25px",
+                marginRight: "25px",
+              }}
+            >
               안중근 님
-            </Nav.Link>
+            </Navbar.Text>
+
             <Button variant="outline-light" onClick={logout}>
               Logout
             </Button>
