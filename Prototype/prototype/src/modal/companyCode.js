@@ -1,15 +1,20 @@
 import { React, useState } from "react";
 import { Button, Modal, Container, Row, Col } from "react-bootstrap";
 
-function CompanyCode(props) {
+function CompanyCode({show, onHide, getdata}) {
   const [CheckedCode, setCheckedCode] = useState("회사 코드를 선택해주세요");
 
   function sendCompanyName(e) {
+    getdata(e.target.innerText);
     setCheckedCode(e.target.innerText);
   }
 
   return (
-    <Modal {...props} aria-labelledby="contained-modal-title-vcenter" centered>
+    <Modal
+      show={show}
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">회사코드</Modal.Title>
       </Modal.Header>
@@ -98,7 +103,7 @@ function CompanyCode(props) {
           <Col md="1">
             <Button
               variant="dark"
-              onClick={props.onHide}
+              onClick={onHide}
               style={{ width: "100px" }}
             >
               선택
