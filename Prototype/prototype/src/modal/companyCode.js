@@ -1,9 +1,9 @@
 import { React } from "react";
 import { Button, Modal, Container, Row, Col } from "react-bootstrap";
 
-function CompanyCode({ show, onHide, getdata }) {
+function CompanyCode(props, { show, onHide }) {
   function sendCompanyName(e) {
-    getdata(e.target.innerText);
+    props.getdata(e.target.innerText);
   }
 
   return (

@@ -2,7 +2,6 @@ import { React, useState } from "react";
 import { useHistory } from "react-router-dom";
 
 import { Button, Form, Image } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import CompanyCodeModal from "../modal/CompanyCode";
 
 function FindPW() {
