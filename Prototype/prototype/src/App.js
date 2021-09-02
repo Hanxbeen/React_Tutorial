@@ -1,8 +1,9 @@
 import { React } from "react";
 import { Switch, Route } from "react-router-dom";
 // import About from "./About";
-import StartPage from "./StartPage";
-import MainPage from "./MainPage";
+import StartPage from "./startpage/Login";
+import MainPage from "./startpage/MainPage";
+import FindPW from "./startpage/FindPW";
 import "./index.css";
 
 const App = () => {
@@ -55,6 +56,7 @@ const App = () => {
       <Switch>
         <Route path="/" exact={true} component={StartPage} />
         <Route path="/main" exact={true} component={MainPage} />
+        <Route path="/findpw" exact={true} component={FindPW} />
 
         <Route path="/main" component={MainPage} />
         {/* <Route path="/profiles/:username" component={Profile} /> */}

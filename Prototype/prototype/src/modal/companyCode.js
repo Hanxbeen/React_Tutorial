@@ -1,20 +1,13 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { Button, Modal, Container, Row, Col } from "react-bootstrap";
 
-function CompanyCode({show, onHide, getdata}) {
-  const [CheckedCode, setCheckedCode] = useState("회사 코드를 선택해주세요");
-
+function CompanyCode({ show, onHide, getdata }) {
   function sendCompanyName(e) {
     getdata(e.target.innerText);
-    setCheckedCode(e.target.innerText);
   }
 
   return (
-    <Modal
-      show={show}
-      aria-labelledby="contained-modal-title-vcenter"
-      centered
-    >
+    <Modal show={show} aria-labelledby="contained-modal-title-vcenter" centered>
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">회사코드</Modal.Title>
       </Modal.Header>
@@ -98,14 +91,12 @@ function CompanyCode({show, onHide, getdata}) {
       <Modal.Footer>
         <Row style={{ width: "100%" }}>
           <Col md="9">
-            <p style={{ color: "gray", fontSize: "13px" }}>{CheckedCode}</p>
+            <p style={{ color: "gray", fontSize: "13px" }}>
+              회사 코드를 클릭하고 선택버튼을 눌러주세요
+            </p>
           </Col>
           <Col md="1">
-            <Button
-              variant="dark"
-              onClick={onHide}
-              style={{ width: "100px" }}
-            >
+            <Button variant="dark" onClick={onHide} style={{ width: "100px" }}>
               선택
             </Button>
           </Col>

@@ -1,9 +1,8 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
 import { Button, Navbar, Nav, Container, Tab, Row, Col } from "react-bootstrap";
-import salesStatus from "./sidemenu/sales/Status";
-import salesManagement from "./sidemenu/sales/Management";
-
+import salesStatus from "../sidemenu/sales/Status";
+import salesManagement from "../sidemenu/sales/Management";
 const MainPage = () => {
   const history = useHistory();
 

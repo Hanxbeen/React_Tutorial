@@ -2,11 +2,11 @@ import { React, useState } from "react";
 import { Link } from "react-router-dom";
 import { Button, Form, Image } from "react-bootstrap";
 // import styles from "./index.css";
-import CompanyCodeModal from "./modal/CompanyCode";
+import CompanyCodeModal from "../modal/CompanyCode";
 
-function StartPage() {
+function Login() {
   const [modalShow, setModalShow] = useState(false);
-  const [companyCode, setCompanyCode] = useState("아직이야");
+  const [companyCode, setCompanyCode] = useState("");
 
   function choice() {
     setModalShow(false);
@@ -23,7 +23,7 @@ function StartPage() {
         width: "300px",
         height: "400px",
         marginLeft: "-150px",
-        marginTop: "-375px",
+        marginTop: "-275px",
       }}
     >
       <Image
@@ -69,13 +69,20 @@ function StartPage() {
       >
         <div style={{ display: "flex", height: "40px" }}>
           <Form.Control type="text" placeholder="사번" />
-          <Button
-            variant="dark"
-            type="submit"
-            style={{ marginLeft: "5px", width: "100px", fontSize: "13px" }}
-          >
-            PW찾기
-          </Button>
+          <Link to="/findpw">
+            <Button
+              variant="dark"
+              type="submit"
+              style={{
+                height: "40px",
+                fontSize: "13px",
+                marginLeft: "5px",
+                width: "78px",
+              }}
+            >
+              PW찾기
+            </Button>
+          </Link>
         </div>
       </Form.Group>
       <Form.Group className="password" controlId="password">
@@ -100,4 +107,4 @@ function StartPage() {
   );
 }
 
-export default StartPage;
+export default Login;
