@@ -1,6 +1,15 @@
 import React from "react";
 import { useHistory } from "react-router-dom";
-import { Button, Navbar, Nav, Container, Tab, Row, Col } from "react-bootstrap";
+import {
+  Image,
+  Button,
+  Navbar,
+  Nav,
+  Container,
+  Tab,
+  Row,
+  Col,
+} from "react-bootstrap";
 import salesStatus from "../sidemenu/sales/Status";
 import salesManagement from "../sidemenu/sales/Management";
 const MainPage = () => {
@@ -22,8 +31,6 @@ const MainPage = () => {
         <Container>
           <Navbar.Brand href="#home">ERP</Navbar.Brand>
           <Nav className="me-auto">
-            {/* <Nav.Link href="#home">접속 상태</Nav.Link> */}
-            {/* <Nav.Link href="#features">사용자 정보</Nav.Link> */}
             <Nav.Link href="#pricing">도움말(F1)</Nav.Link>
             <Nav.Link href="#pricing">환경 설정</Nav.Link>
             <Nav.Link href="#pricing">등록</Nav.Link>
@@ -31,12 +38,51 @@ const MainPage = () => {
             <Nav.Link href="#pricing">저장</Nav.Link>
             <Nav.Link href="#pricing">조회</Nav.Link>
             <Nav.Link href="#pricing">출력</Nav.Link>
-            <Button variant="danger " onClick={logout}>
-              LOGOUT
-            </Button>
+            <Nav.Item>
+              <Nav.Link href="/main">Active</Nav.Link>
+            </Nav.Item>
           </Nav>
+          <Nav fill variant="tabs" defaultActiveKey="/home">
+            {/** <Nav.Item>
+              <Nav.Link href="/link-1">Active</Nav.Link>
+            </Nav.Item>*/}
+            <Nav.Item>
+              <Nav.Link eventKey="link-2">Loooonger NavLink</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link-3">Link</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="disabled" disabled>
+                Disabled
+              </Nav.Link>
+            </Nav.Item>
+          </Nav>
+          <Navbar.Collapse className="justify-content-end">
+            {/**<Navbar.Text>
+              Signed in as: <a href="#login">Mark Otto</a>
+            </Navbar.Text>
+            <Nav.Link href="#home" style={{ color: "white" }}>
+              접속 상태
+            </Nav.Link>*/}
+            <Image
+              src="img/signal.png"
+              onClick={logout}
+              style={{
+                width: "22px",
+                height: "20px",
+              }}
+            />
+            <Nav.Link href="#features" style={{ color: "white" }}>
+              안중근 님
+            </Nav.Link>
+            <Button variant="outline-light" onClick={logout}>
+              Logout
+            </Button>
+          </Navbar.Collapse>
         </Container>
       </Navbar>
+      {/************************************************************/}
       <Tab.Container id="left-tabs-example" defaultActiveKey="first">
         <Row>
           <Col sm={3}>
