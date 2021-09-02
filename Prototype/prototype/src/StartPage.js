@@ -6,6 +6,8 @@ import CompanyCodeModal from "./modal/CompanyCode";
 
 function StartPage() {
   const [modalShow, setModalShow] = useState(false);
+  const [companyCode, setCompanyCode] = useState("아직이야");
+
   function choice() {
     setModalShow(false);
   }
@@ -35,7 +37,13 @@ function StartPage() {
         style={{ marginBottom: "5px" }}
       >
         <div style={{ display: "flex", height: "40px" }}>
-          <Form.Control type="text" placeholder="회사코드" />
+          <Form.Control
+            type="text"
+            placeholder="회사코드"
+            value={companyCode}
+            readOnly
+          />
+
           <Button
             variant="dark"
             type="search"
@@ -47,7 +55,11 @@ function StartPage() {
 
           {/*여기가 모달창에서 값 받아오는 곳이여*/}
 
-          <CompanyCodeModal show={modalShow} onHide={() => choice()} />
+          <CompanyCodeModal
+            show={modalShow}
+            onHide={() => choice()}
+            getdata={setCompanyCode}
+          />
         </div>
       </Form.Group>
       <Form.Group
