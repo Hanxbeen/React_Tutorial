@@ -5,7 +5,8 @@ import StartPage from "./startpage/Login";
 import MainPage from "./startpage/MainPage";
 import FindPW from "./startpage/FindPW";
 import "./index.css";
-
+// import Sidebar from "../components/Sidebar";
+// import Navibar from "../components/Navibar";
 const App = () => {
   // let userCheck = "admin";
 
