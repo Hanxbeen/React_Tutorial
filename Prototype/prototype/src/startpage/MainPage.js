@@ -1,5 +1,8 @@
 import React from "react";
 // import { useHistory, Link } from "react-router-dom";
+// import { Switch, Route } from "react-router-dom";
+import { Route } from "react-router-dom";
+
 import //   Image,
 //   Button,
 //   Navbar,
@@ -10,6 +13,8 @@ import //   Image,
 import "./Start.css";
 import Sidebar from "../components/Sidebar";
 import Navibar from "../components/Navibar";
+import Company from "../sidemenu/company/Company";
+
 const MainPage = () => {
   return (
     <>
@@ -24,8 +29,20 @@ const MainPage = () => {
       </div> */}
       <div style={{ display: "flex" }}>
         <Sidebar />
+        {/* <Switch> */}
+        {/* <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} />
+          <Route path="/" exact={true} component={StartPage} /> */}
+        {/* </Switch> */}
         <p style={{ flex: 7, marginTop: "6vh" }}>
-          ddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
+          이 공간에서 페이지를 보여준다.
+          <Company />
         </p>
       </div>
     </>

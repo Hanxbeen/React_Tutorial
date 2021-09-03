@@ -7,6 +7,8 @@ import FindPW from "./startpage/FindPW";
 import "./index.css";
 // import Sidebar from "../components/Sidebar";
 // import Navibar from "../components/Navibar";
+import Company from "./sidemenu/company/Company";
+
 const App = () => {
   // let userCheck = "admin";
 
@@ -58,6 +60,7 @@ const App = () => {
         <Route path="/" exact={true} component={StartPage} />
         <Route path="/main" exact={true} component={MainPage} />
         <Route path="/findpw" exact={true} component={FindPW} />
+        <Route path="/companyMng" exact={true} component={Company} />
 
         <Route path="/main" component={MainPage} />
         {/* <Route path="/profiles/:username" component={Profile} /> */}

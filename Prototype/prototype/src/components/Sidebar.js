@@ -2,14 +2,14 @@ import React from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
-
+import Company from "../sidemenu/company/Company";
 function Sidebar() {
   return (
     <div>
       <ProSidebar style={{ height: "100vh", width: "15vw", marginTop: "6vh" }}>
         <Menu iconShape="square">
           <MenuItem className="submenues">
-            회사 관리 <Link to="/" />
+            회사 관리 <Link to="/companyMng" />
           </MenuItem>
           <MenuItem className="submenues">
             육묘장 관리 <Link to="/" />
