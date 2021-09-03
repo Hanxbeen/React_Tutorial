@@ -5,12 +5,12 @@ import {
   Button,
   Navbar,
   Nav,
-  Container,
+  // Container,
   NavDropdown,
 } from "react-bootstrap";
 import "./Start.css";
-import salesStatus from "../sidemenu/sales/Status";
-import salesManagement from "../sidemenu/sales/Management";
+// import salesStatus from "../sidemenu/sales/Status";
+// import salesManagement from "../sidemenu/sales/Management";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 const MainPage = () => {
@@ -164,6 +164,10 @@ const MainPage = () => {
               <MenuItem className="subitems">거래처 등록</MenuItem>
               <MenuItem className="subitems">품목 등록</MenuItem>
               <MenuItem className="subitems">자산 / 설비 등록</MenuItem>
+              <SubMenu title="자산 / 설비 등록" className="submenues">
+                <MenuItem className="subitems">자산 등록</MenuItem>
+                <MenuItem className="subitems">설비 등록</MenuItem>
+              </SubMenu>
               <MenuItem className="subitems">구매의뢰 등록</MenuItem>
               <MenuItem className="subitems">구매처리 등록</MenuItem>
             </SubMenu>
@@ -181,3 +185,5 @@ const MainPage = () => {
 };
 
 export default MainPage;
+// https://github.com/azouaoui-med/react-pro-sidebar
+// https://reactjsexample.com/customizable-and-responsive-react-sidebar-library-with-dropdown-menus/
