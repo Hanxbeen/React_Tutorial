@@ -8,7 +8,7 @@ import {
   Container,
   NavDropdown,
 } from "react-bootstrap";
-import start from "./start.css";
+import "./Start.css";
 import salesStatus from "../sidemenu/sales/Status";
 import salesManagement from "../sidemenu/sales/Management";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
