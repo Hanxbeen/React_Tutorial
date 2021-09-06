@@ -2,7 +2,6 @@ import React from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
-import Company from "../sidemenu/company/Company";
 function Sidebar() {
   return (
     <div>
@@ -12,7 +11,7 @@ function Sidebar() {
             회사 관리 <Link to="/companyMng" />
           </MenuItem>
           <MenuItem className="submenues">
-            육묘장 관리 <Link to="/" />
+            육묘장 관리 <Link to="/raisingseedinghouse" />
           </MenuItem>
           <MenuItem className="submenues">
             생산창고 관리 <Link to="/" />
@@ -40,7 +39,7 @@ function Sidebar() {
           <SubMenu title="자재 / 설비관리" className="submenues">
             <MenuItem className="subitems">거래처 등록</MenuItem>
             <MenuItem className="subitems">품목 등록</MenuItem>
-            <MenuItem className="subitems">자산 / 설비 등록</MenuItem>
+            {/* <MenuItem className="subitems">자산 / 설비 등록</MenuItem> */}
             <SubMenu title="자산 / 설비 등록" className="submenues">
               <MenuItem className="subitems">자산 등록</MenuItem>
               <MenuItem className="subitems">설비 등록</MenuItem>

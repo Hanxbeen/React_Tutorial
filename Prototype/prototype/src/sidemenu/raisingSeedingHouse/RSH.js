@@ -1,11 +1,21 @@
 import { React } from "react";
 import "./RSH.css";
 
+import Sidebar from "../../components/Sidebar";
+import Navibar from "../../components/Navibar";
 function RSH() {
   return (
-    <div className="example">
-      <p>육묘장</p>
+    <>
+    <div>
+      <Navibar />
     </div>
+    <div className="parent">
+      <Sidebar className="child" />
+      <p style={{ flex: 7, marginTop: "6vh" }}>
+        육묘장
+      </p>
+    </div>
+  </>
   );
 }
 
