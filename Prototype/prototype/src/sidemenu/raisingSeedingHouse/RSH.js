@@ -1,10 +1,31 @@
 import { React } from "react";
 import "./RSH.css";
-import { Row, Col, Card, Pagination, Form, Button } from "react-bootstrap";
+import { Row, Col, Form, Button } from "react-bootstrap";
+import TableCustom from "../../components/TableCustom";
 
 import Sidebar from "../../components/Sidebar";
 import Navibar from "../../components/Navibar";
+// 랜덤 데이터를 생성해주는 faker 라이브러리
+import faker from "faker/locale/ko";
+faker.seed(100);
 function RSH() {
+  const columns = ["CompanyCode", "RshName", "Addr", "Phone"];
+  // const [companyCode, setCompanyCode] = useState("");
+  // const [rshName, setRshName] = useState("");
+  // const [addr, setAddr] = useState("");
+  // const [phone, setPhone] = useState("");
+
+  // function getData() {
+  //   console.log();
+  // }
+  const data = Array(20)
+    .fill()
+    .map(() => ({
+      CompanyCode: faker.random.number(),
+      RshName: faker.company.companyName(),
+      Addr: faker.address.city(),
+      Phone: faker.phone.phoneNumber(),
+    }));
   return (
     <>
       <div>
@@ -20,78 +41,60 @@ function RSH() {
             width: "100%",
           }}
         >
-          <Row>
-            <Col>
-              <Card small className="mb-4">
-                <Card.Body className="p-0 pb-3">
-                  <table className="table mb-0">
-                    <thead className="bg-light">
-                      <tr>
-                        <th scope="col" className="border-0">
-                          #
-                        </th>
-                        <th scope="col" className="border-0">
-                          회사코드
-                        </th>
-                        <th scope="col" className="border-0">
-                          육묘장 명
-                        </th>
-                        <th scope="col" className="border-0">
-                          시/군 구/동
-                        </th>
+          {/* <Table striped bordered hover variant="dark"> */}
+          {/* <Table striped bordered hover>
+            <thead>
+              <tr>
+                <th scope="col" className="border-0">
+                  #
+                </th>
+                <th scope="col" className="border-0">
+                  회사코드
+                </th>
+                <th scope="col" className="border-0">
+                  육묘장 명
+                </th>
+                <th scope="col" className="border-0">
+                  시/군 구/동
+                </th>
 
-                        <th scope="col" className="border-0">
-                          번호
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>1</td>
-                        <td>100000</td>
-                        <td>00 육묘장</td>
-                        <td>000도 00시 00구 00동 000</td>
-                        <td>063-000-0000</td>
-                      </tr>
-                      <tr>
-                        <td>2</td>
-                        <td>100000</td>
-                        <td>00 육묘장</td>
-                        <td>000도 00시 00구 00동 000</td>
-                        <td>063-000-0000</td>
-                      </tr>
-                      <tr>
-                        <td>3</td>
-                        <td>100000</td>
-                        <td>00 육묘장</td>
-                        <td>000도 00시 00구 00동 000</td>
-                        <td>063-000-0000</td>
-                      </tr>
-                      <tr>
-                        <td>4</td>
-                        <td>100000</td>
-                        <td>00 육묘장</td>
-                        <td>000도 00시 00구 00동 000</td>
-                        <td>063-000-0000</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-          <Pagination style={{ justifyContent: "center" }}>
-            <Pagination.First />
-            <Pagination.Prev />
-            <Pagination.Item active>{1}</Pagination.Item>
-            <Pagination.Item>{2}</Pagination.Item>
-            <Pagination.Item>{3}</Pagination.Item>
-            <Pagination.Item>{4}</Pagination.Item>
-            {/* <Pagination.Ellipsis />
-              <Pagination.Item>{11}</Pagination.Item> */}
-            <Pagination.Next />
-            <Pagination.Last />
-          </Pagination>
+                <th scope="col" className="border-0">
+                  번호
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>100000</td>
+                <td>00 육묘장</td>
+                <td>000도 00시 00구 00동 000</td>
+                <td>063-000-0000</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>100000</td>
+                <td>00 육묘장</td>
+                <td>000도 00시 00구 00동 000</td>
+                <td>063-000-0000</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>100000</td>
+                <td>00 육묘장</td>
+                <td>000도 00시 00구 00동 000</td>
+                <td>063-000-0000</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>100000</td>
+                <td>00 육묘장</td>
+                <td>000도 00시 00구 00동 000</td>
+                <td>063-000-0000</td>
+              </tr>
+            </tbody>
+          </Table> */}
+          <TableCustom columns={columns} data={data} />
           <hr></hr>
           <Form
             style={{
