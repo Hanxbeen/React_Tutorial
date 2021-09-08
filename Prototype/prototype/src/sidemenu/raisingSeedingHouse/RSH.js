@@ -18,7 +18,7 @@ function RSH() {
   // function getData() {
   //   console.log();
   // }
-  const data = Array(7)
+  const data = Array(15)
     .fill()
     .map(() => ({
       CompanyCode: faker.random.number(),
@@ -94,7 +94,10 @@ function RSH() {
               </tr>
             </tbody>
           </Table> */}
-          <TableCustom columns={columns} data={data} />
+
+          <div style={{ height: "35vh", overflow: "scroll" }}>
+            <TableCustom columns={columns} data={data} />
+          </div>
           <hr></hr>
           <Form
             style={{
