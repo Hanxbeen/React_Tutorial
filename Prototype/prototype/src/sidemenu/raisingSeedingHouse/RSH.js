@@ -18,7 +18,7 @@ function RSH() {
   // function getData() {
   //   console.log();
   // }
-  const data = Array(20)
+  const data = Array(7)
     .fill()
     .map(() => ({
       CompanyCode: faker.random.number(),
@@ -101,7 +101,10 @@ function RSH() {
               alignSelf: "center",
               justifyContent: "center",
               width: "100%",
-              padding: "200px",
+              // padding: "200px",
+              paddingLeft: "50px",
+              paddingRight: "50px",
+              paddingTop: "50px",
             }}
           >
             <Row className="mb-3">
