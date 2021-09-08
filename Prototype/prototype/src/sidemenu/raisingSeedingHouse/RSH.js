@@ -95,7 +95,7 @@ function RSH() {
             </tbody>
           </Table> */}
 
-          <div style={{ height: "35vh", overflow: "scroll" }}>
+          <div style={{ height: "35vh", overflow: "auto" }}>
             <TableCustom columns={columns} data={data} />
           </div>
           <hr></hr>
