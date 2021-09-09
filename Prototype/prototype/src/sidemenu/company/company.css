@@ -12,3 +12,9 @@
   color: white;
   color: rgb(212, 245, 253);
 }
+.parent {
+  display: flex;
+}
+.child {
+  flex: 1;
+}
