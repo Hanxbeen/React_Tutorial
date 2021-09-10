@@ -8,6 +8,8 @@ import "./index.css";
 
 import Company from "./sidemenu/company/Company";
 import RSH from "./sidemenu/raisingSeedingHouse/RSH";
+import Warehouse from "./sidemenu/productionWarehouse/Warehouse";
+
 const App = () => {
   // let userCheck = "admin";
   const [mainCheck, setMainCheck] = useState(false);
@@ -74,6 +76,8 @@ const App = () => {
         <Route path="/findpw" exact={true} component={FindPW} />
         <Route path="/companyMng" component={Company} />
         <Route path="/raisingseedinghouse" component={RSH} />
+        <Route path="/warehouse" component={Warehouse} />
+
         {/* <Route path="/main" component={MainPage} /> 
  <Route path="/profiles/:username" component={Profile} /> */}
         <Route

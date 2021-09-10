@@ -14,7 +14,7 @@ function Sidebar() {
             육묘장 관리 <Link to="/raisingseedinghouse" />
           </MenuItem>
           <MenuItem className="submenues">
-            생산창고 관리 <Link to="/" />
+            생산창고 관리 <Link to="/warehouse" />
           </MenuItem>
           <SubMenu title="인사 관리" className="submenues">
             <MenuItem className="subitems">
