@@ -2,11 +2,21 @@ import React from "react";
 import { ProSidebar, Menu, MenuItem, SubMenu } from "react-pro-sidebar";
 import "react-pro-sidebar/dist/css/styles.css";
 import { Link } from "react-router-dom";
+import { Tabs, Tab } from "react-bootstrap";
+
 function Sidebar() {
   return (
     <div>
       {/*, marginTop: "6vh"*/}
-      <ProSidebar style={{ height: "100vh", width: "15vw" }}>
+      <ProSidebar style={{ height: "100vh", width: "17vw" }}>
+        {/*<Tabs
+          defaultActiveKey="profile"
+          id="uncontrolled-tab-example"
+          className="mb-3"
+          variant="pills"
+          style={{ width: "100%", color: "white" }}
+        >
+        <<Tab eventKey="master" title="MASTER">*/}
         <Menu iconShape="square">
           <MenuItem className="submenues">
             회사 관리 <Link to="/companyMng" />
@@ -17,6 +27,10 @@ function Sidebar() {
           <MenuItem className="submenues">
             생산창고 관리 <Link to="/warehouse" />
           </MenuItem>
+          {/* </Menu>
+          </Tab>
+            <Tab eventKey="regist" title="REGIST">
+            <Menu iconShape="square">*/}
           <SubMenu title="인사 관리" className="submenues">
             <MenuItem className="subitems">
               사용자 등록
@@ -55,6 +69,10 @@ function Sidebar() {
             <MenuItem className="subitems">매출처리 등록</MenuItem>
           </SubMenu>
         </Menu>
+        {/*</Tab>
+          <Tab eventKey="select" title="SELECT"></Tab>
+          {/* <Tab eventKey="contact" title="현황 조회" disabled></Tab> 
+        </Tabs>*/}
       </ProSidebar>
     </div>
   );
