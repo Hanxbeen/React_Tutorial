@@ -26,7 +26,7 @@ function Company() {
         <Sidebar />
         <div
           style={{
-            marginTop: "6vh",
+            marginTop: "1vh",
             marginLeft: "10px",
             flex: "1",
           }}

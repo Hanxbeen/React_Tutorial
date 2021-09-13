@@ -5,7 +5,7 @@ import {
   Button,
   Navbar,
   Nav,
-  // Container,
+  Container,
   NavDropdown,
 } from "react-bootstrap";
 
@@ -23,44 +23,68 @@ function Navibar() {
     }
   };
   return (
-    <>
+    <div>
       <Navbar
-        fixed="top"
+        //fixed="top"
         bg="black"
         variant="dark"
-        style={{ height: "6vh", width: "100vw" }}
+        style={{ height: "7vh", width: "100vw" }}
       >
         <Image
           alt=""
           src="img/green.png"
-          width="30"
-          height="30"
+          width="45"
+          height="45"
           style={{ marginLeft: "50px", marginRight: "20px" }}
         />
-        <Navbar.Brand href="/main" style={{ marginRight: "60px" }}>
+        <Navbar.Brand
+          href="/main"
+          style={{ marginRight: "60px", fontSize: "30px" }}
+        >
           ERP
         </Navbar.Brand>
-        <Nav defaultActiveKey="/home">
-          <Nav.Item>
-            <Nav.Link eventKey="link-1">도움말(F1)</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link eventKey="link-2">환경 설정</Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <NavDropdown
-              id="nav-dropdown-dark-example"
-              title="ACTION"
-              menuVariant="dark"
-            >
-              <NavDropdown.Item href="#action/3.1">등록</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">수정</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">조회</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">삭제</NavDropdown.Item>
-            </NavDropdown>
-          </Nav.Item>
-        </Nav>
+        <div>
+          <Nav defaultActiveKey="/home">
+            <Nav.Item>
+              <Nav.Link eventKey="link-1">도움말(F1)</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link eventKey="link-2">환경 설정</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <NavDropdown
+                id="nav-dropdown-dark-example"
+                title="ACTION"
+                menuVariant="dark"
+              >
+                <NavDropdown.Item href="#action/3.1">등록</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">수정</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">조회</NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">삭제</NavDropdown.Item>
+              </NavDropdown>
+            </Nav.Item>
+          </Nav>
+          <Nav className="me-auto">
+            <Nav.Link href="#regist">
+              <Button variant="outline-primary">등록</Button>
+            </Nav.Link>
+            <Nav.Link href="#update">
+              <Button variant="outline-light">수정</Button>
+            </Nav.Link>
+            <Nav.Link href="#select">
+              <Button variant="outline-light">조회</Button>
+            </Nav.Link>
+            <Nav.Link href="#delete">
+              <Button variant="outline-danger">삭제</Button>
+            </Nav.Link>
+            {/*
+            <Button variant="secondary">수정</Button>
+            <Button variant="danger">삭제</Button>
+            <Button variant="info">수정</Button>
+            <Button variant="light">Light</Button>*/}
+          </Nav>
+        </div>
         <Navbar.Collapse
           className="justify-content-end"
           style={{ marginRight: "50px" }}
@@ -93,7 +117,7 @@ function Navibar() {
           </Button>
         </Navbar.Collapse>
       </Navbar>
-    </>
+    </div>
   );
 }
 

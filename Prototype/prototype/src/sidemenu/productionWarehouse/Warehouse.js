@@ -61,7 +61,7 @@ function Warehouse() {
       </div>
       <div style={{ display: "flex", width: "100%", height: "100%" }}>
         <Sidebar style={{ flex: "1" }} />
-        <div style={{ flex: "1", marginTop: "6vh" }}>
+        <div style={{ flex: "1" }}>
           <div style={{ display: "flex", height: "30vh" }}>
             <div
               style={{
@@ -258,7 +258,7 @@ function Warehouse() {
           <div
             style={{ display: "flex", height: "40vh", alignItems: "center" }}
           >
-            <div style={{ flex: "1", height: "100%" }}>
+            <div style={{ flex: "1", height: "100%", marginTop: "40px" }}>
               <h5 style={{ marginLeft: "20px", fontWeight: "600" }}>
                 주간 매출 현황
               </h5>

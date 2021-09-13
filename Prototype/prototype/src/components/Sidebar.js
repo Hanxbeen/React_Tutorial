@@ -5,7 +5,8 @@ import { Link } from "react-router-dom";
 function Sidebar() {
   return (
     <div>
-      <ProSidebar style={{ height: "100vh", width: "15vw", marginTop: "6vh" }}>
+      {/*, marginTop: "6vh"*/}
+      <ProSidebar style={{ height: "100vh", width: "15vw" }}>
         <Menu iconShape="square">
           <MenuItem className="submenues">
             회사 관리 <Link to="/companyMng" />

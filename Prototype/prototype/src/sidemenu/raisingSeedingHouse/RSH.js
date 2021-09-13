@@ -35,7 +35,7 @@ function RSH() {
         <Sidebar className="child" />
         <div
           style={{
-            marginTop: "7vh",
+            marginTop: "1vh",
             marginLeft: "10px",
             marginRight: "10px",
             width: "100%",
