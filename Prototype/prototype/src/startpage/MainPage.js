@@ -22,7 +22,8 @@ const MainPage = () => {
       </div>
       <div className="parent">
         <Sidebar className="child" />
-        <p style={{ flex: 7, marginTop: "6vh" }}>
+        {/*, marginTop: "6vh"*/}
+        <p style={{ flex: 7 }}>
           이 공간에서 페이지를 보여준다.
         </p>
       </div>

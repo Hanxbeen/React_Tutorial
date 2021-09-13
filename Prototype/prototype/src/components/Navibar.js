@@ -57,7 +57,9 @@ function Navibar() {
                 title="ACTION"
                 menuVariant="dark"
               >
-                <NavDropdown.Item href="#action/3.1">등록</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">
+                  <p style={{ color: "white" }}>등록</p>
+                </NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">수정</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.3">조회</NavDropdown.Item>
                 <NavDropdown.Divider />
@@ -67,16 +69,24 @@ function Navibar() {
           </Nav>
           <Nav className="me-auto">
             <Nav.Link href="#regist">
-              <Button variant="outline-primary">등록</Button>
+              <Button variant="outline-light" style={{ height: "35px" }}>
+                등록
+              </Button>
             </Nav.Link>
             <Nav.Link href="#update">
-              <Button variant="outline-light">수정</Button>
+              <Button variant="outline-light" style={{ height: "35px" }}>
+                수정
+              </Button>
             </Nav.Link>
             <Nav.Link href="#select">
-              <Button variant="outline-light">조회</Button>
+              <Button variant="outline-light" style={{ height: "35px" }}>
+                조회
+              </Button>
             </Nav.Link>
             <Nav.Link href="#delete">
-              <Button variant="outline-danger">삭제</Button>
+              <Button variant="outline-light" style={{ height: "35px" }}>
+                삭제
+              </Button>
             </Nav.Link>
             {/*
             <Button variant="secondary">수정</Button>
