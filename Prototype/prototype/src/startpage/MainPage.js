@@ -1,14 +1,6 @@
 import React from "react";
 // import { useHistory, Link } from "react-router-dom";
 
-// import
-//   Image,
-//   Button,
-//   Navbar,
-//   Nav,
-//   Container,
-//   NavDropdown,
-// "react-bootstrap";
 import "./Start.css";
 import Sidebar from "../components/Sidebar";
 import Navibar from "../components/Navibar";
@@ -23,9 +15,7 @@ const MainPage = () => {
       <div className="parent">
         <Sidebar className="child" />
         {/*, marginTop: "6vh"*/}
-        <p style={{ flex: 7 }}>
-          이 공간에서 페이지를 보여준다.
-        </p>
+        <p style={{ flex: 7 }}>dddd</p>
       </div>
     </>
   );
