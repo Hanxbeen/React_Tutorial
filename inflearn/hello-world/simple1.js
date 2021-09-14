@@ -13,5 +13,7 @@ function LikeButton() {
 
 const domContainer = document.getElementById("root");
 ReactDOM.render(React.createElement(LikeButton), domContainer);
+const domContainer2 = document.getElementById("root2");
+ReactDOM.render(React.createElement(LikeButton), domContainer2);
 const domContainer3 = document.getElementById("root3");
 ReactDOM.render(React.createElement(LikeButton), domContainer3);
