@@ -11,9 +11,24 @@ function LikeButton() {
   );
 }
 
+function CountBtn() {
+  const [count, setCount] = React.useState(0);
+  return React.createElement(
+    "div",
+    null,
+    React.createElement("p", null, count),
+    React.createElement(
+      "button",
+      { onClick: () => setCount(count + 1) },
+      "증가"
+    ),
+    React.createElement(
+      "button",
+      { onClick: () => setCount(count - 1) },
+      "감소"
+    )
+  );
+}
+
 const domContainer = document.getElementById("root");
-ReactDOM.render(React.createElement(LikeButton), domContainer);
-const domContainer2 = document.getElementById("root2");
-ReactDOM.render(React.createElement(LikeButton), domContainer2);
-const domContainer3 = document.getElementById("root3");
-ReactDOM.render(React.createElement(LikeButton), domContainer3);
+ReactDOM.render(React.createElement(CountBtn), domContainer);
